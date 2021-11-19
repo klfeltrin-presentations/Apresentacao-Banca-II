@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Apresentação Banca Estágio</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+
+    <link rel="icon" href="images/icon-unifil-logo.png">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- CAPA -->
+            <section>
+                <h3 style="text-align: left;">Sistema para solucionar o problema de escalonamento do Job Shop Flexível com Deep Learning</h3>
+                <hr>
+                <p style="text-align: left;">Aluno: Kelvin de Lucca Feltrin</p>
+                <p style="text-align: left;">Curso: Bacharelado em Ciência da Computação</p>
+                <p style="text-align: left;">Orientador: Marc Antonio Vieira de Queiroz</p>
+                <p style="text-align: left;">Co-Orientador: Lupercio Fuganti Luppi</p>
+                <br>
+                <p>Londrina, Novembro/2021</p>
+            </section>
+
+            <!-- OBJETIVOS E MOTIVAÇÕES -->
+            <section>
+                <section>
+                    <h3>Objetivos e Motivações</h3>
+
+                    <ul>
+                        <li>Tratar o problema do Job Shop Flexível</li>
+                        <br>
+                        <li>Considerado um problema combinatório de complexidade NP-Hard</li>
+                        <br>
+                        <li>Existem diversos tipos de solução na literatura</li>
+                        <br>
+                        <li>A abordagem que melhor se adequa como solução é através de Deep Reinforcement Learning</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Objetivos e Motivações</h3>
+
+                    <figure>
+                        <img src="images/diagrama-gantt.png" alt="Diagrama  de  Gantt  para  um  problema  3 x 3." width="900" height="400">
+                        <figcaption>Diagrama de Gantt para um problema 3 x 3.</figcaption>
+                        <figcaption>Fonte: (YAMADA; NAKANO, 2000)</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>Objetivos e Motivações</h3>
+                    <br>
+                    <figure>
+                        <img src="images/reinforcement-learning.png" alt="Representação do aprendizado por reforço">
+                        <figcaption>Representação do aprendizado por reforço</figcaption>
+                        <figcaption>Fonte: (Cao, 2019)</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>Objetivos e Motivações</h3>
+
+                    <ul>
+                        <li>Não existe um ambiente de testes padronizado para comparar os algoritmos</li>
+                        <br>
+                        <li>Jobs com características distintas</li>
+                        <br>
+                        <li>Critérios de desempenho variados para avaliar o desempenho do escalonamento</li>
+                        <br>
+                        <li>Falta de informação a respeito dos exemplos de treinamento</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Objetivos e Motivações</h3>
+                    <ul>
+                        <li>Desenvolver um ambiente de testes personalizável</li>
+                        <br>
+                        <li>Testar diferentes abordagens de solução</li>
+                        <br>
+                        <li>Aplicar um modelo consolidado para avaliar o desempenho do escalonamento</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- TECNOLOGIAS USADAS -->
+            <section>
+                <h3>Tecnologias usadas</h3>
+                <div style="display: flex; flex-direction: row; flex-wrap: wrap;
+                justify-content: space-around;">
+                    <figure>
+                        <a href="https://www.python.org" target="blank">
+                            <img src="images/tecnologias/python-logo.png" width="150" height="150">
+                        </a>
+                        <figcaption>Python 3.6</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://streamlit.io" target="blank">
+                            <img src="images/tecnologias/streamlit-logo.png" width="150" height="150">
+                        </a>
+                        <figcaption>Streamlit 0.57.3</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://www.tensorflow.org/?hl=pt-br" target="blank">
+                            <img src="images/tecnologias/tensorflow-logo.png" width="150" height="150">
+                        </a>
+                        <figcaption>Tensorflow 2.5</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://keras.io/" target="blank">
+                            <img src="images/tecnologias/Keras.png" width="150" height="150">
+                        </a>
+                        <figcaption>Keras 2.4.3</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://gym.openai.com/" target="blank">
+                            <img src="images/tecnologias/Gym.svg" width="150" height="150">
+                        </a>
+                        <figcaption>Gym 0.18.3</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://www.sqlite.org/index.html" target="blank">
+                            <img src="images/tecnologias/SQLite.png" width="150" height="150">
+                        </a>
+                        <figcaption>SQLite</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://www.heroku.com/" target="blank">
+                            <img src="images/tecnologias/Heroku.png" width="150" height="150">
+                        </a>
+                        <figcaption>Heroku</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- RUP -->
+            <!-- <section>
+                <h3>RUP</h3>
+                <ul>
+                    <li>Fase atual do projeto: Construção</li>
+                </ul>
+                <img src="images/RUP-fases.jpg" width="900" height="500">
+            </section> -->
+
+
+            <!-- DIAGRAMAS GLOBAIS -->
+            <section>
+                <section>
+                    <h3>Diagramas Globais</h3>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Diagrama de Caso de Uso (Visão Global)</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Use Case Diagram.png" width="900" height="500">
+                </section>
+
+                <section>
+                    <h3>Diagramas Globais</h3>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Diagrama de Classe</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Classe/Class Diagram.png" width="900" height="500">
+                </section>
+
+                <section>
+                    <h3>Diagramas Globais</h3>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Diagrama de Componentes</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Componentes/Component Diagram.png" width="900" height="500">
+                </section>
+
+                <section>
+                    <h3>Diagramas Globais</h3>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Diagrama de Implantação</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Implantacao/Deployment Diagram.png" width="900" height="500">
+                </section>
+
+                <section>
+                    <h3>Diagramas Globais</h3>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Diagrama de Entidade e Relacionamento (DER)</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/DER/DER.png" width="900" height="500">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR REGISTROS DE TREINAMENTO -->
+            <section>
+                <section>
+                    <h3>Gerenciar Registros de Treinamento</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Registros de Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Gerenciar Registros de Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarRegistrosTreinamento.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Registros de Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Gerenciar Registros de Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/GerenciarRegistrosTreinamento.png" width="750" height="500">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR PARAMETROS AMBIENTE -->
+            <section>
+                <section>
+                    <h3>Gerenciar Parâmetros do Ambiente</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Ambiente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Gerenciar Parâmetros do Ambiente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarParametrosAmbiente.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Ambiente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Gerenciar Parâmetros do Ambiente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/GerenciarParametrosAmbiente.png" width="750" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Ambiente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Tela Gerenciar Parâmetros do Ambiente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Telas/Tela parametros ambiente.png" width="500" height="400">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR PARAMETROS AGENTE -->
+            <section>
+                <section>
+                    <h3>Gerenciar Parâmetros do Agente</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Agente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Gerenciar Parâmetros do Agente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarParametrosAgente.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Agente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Gerenciar Parâmetros do Agente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/GerenciarParametrosAgente.png" width="700" height="450">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Parâmetros do Agente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Tela Gerenciar Parâmetros do Agente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Telas/Tela parametros agente.png" width="380" height="520">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR ACOES DO SISTEMA -->
+            <section>
+                <section>
+                    <h3>Gerenciar Ações do Sistema</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Ações do Sistema</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Gerenciar Ações do Sistema</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarAcoesSistema.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Ações do Sistema</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Gerenciar Ações do Sistema</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/GerenciarAcoesSistema.png" width="800" height="500">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR TREINAMENTO AGENTE -->
+            <section>
+                <section>
+                    <h3>Gerenciar Treinamento do Agente</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Treinamento do Agente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso GerenciarTreinamento do Agente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarTreinamentoAgente.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Gerenciar Treinamento do Agente</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Gerenciar Treinamento do Agente</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/GerenciarTreinamentoAgente.png" width="800" height="500">
+                </section>
+            </section>
+
+
+            <!-- GERENCIAR HISTORICO TREINAMENTO -->
+            <section>
+                <section>
+                    <h3>Gerenciar Histórico do Treinamento</h3>
+                </section>
+
+                <section>
+                    <h4>Gerenciar Histórico do Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Gerenciar Histórico do Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_GerenciarHistoricoTreinamento.png" width="600" height="500">
+                </section>
+            </section>
+
+
+            <!-- EXIBIR DADOS TREINAMENTO -->
+            <section>
+                <section>
+                    <h3>Exibir Dados do Treinamento</h3>
+                </section>
+
+                <section>
+                    <h4>Exibir Dados do Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li>Caso de Uso Exibir Dados do Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Caso de Uso/Suc_ExibirDadosTreinamento.png" width="600" height="500">
+                </section>
+
+                <section>
+                    <h4>Exibir Dados do Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Diagrama de Sequência Exibir Dados do Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Diagrama de Sequencia/ExibirDadosTreinamento.png" width="800" height="500">
+                </section>
+
+                <section>
+                    <h4>Exibir Dados do Treinamento</h4>
+                    <ul>
+                        <a href="" target="blank" style="color: black;">
+                            <li style="font-size: 35px;">Tela Exibir Dados do Treinamento</li>
+                        </a>
+                    </ul>
+                    <img src="images/diagramas/Telas/Tela resultado.png" width="450" height="500">
+                </section>
+            </section>
+
+
+            <!--ARTEFATOS DE REQUISITOS-->
+            <section>
+                <section>
+                    <h3>Artefatos de Requisitos</h3>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1pv_V2jCKsB_ey-SbHUygSQs52wos6gP4/view?usp=sharing" style="text-decoration: none; color: black;" target="blank">
+                            Documento Visão
+                        </a></li>
+                    </ul>
+
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vSOGEaqhenoO3gp3-dV9ZcynwVVhvzJSJN8kH89ujs9XGmezdxOVoUyTxFSiegN6w/pub?embedded=true" width="700" height="500"></iframe>
+                </section>
+                <section>
+                    <h3>Artefatos de Requisitos</h3>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1tecTSWNhMy4kD3FSNq4F0E_bYONb1uu7/view?usp=sharing" style="text-decoration: none; color: black;" target="blank">
+                            Especificação Complementar
+                        </a></li>
+                    </ul>
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vT6pZnXA-6dYs9-PLW7-RiorE270ZJSWaFZIEQ1JcTQGHoE7TeWJIfIX4RJFufkzw/pub?embedded=true" width="700" height="500"></iframe>
+                </section>
+                <section>
+                    <h3>Artefatos de Requisitos</h3>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1yuc2fEcCwm6xQd7Dzeh0iY6FuT-1HsEJ/view?usp=sharing" style="text-decoration: none; color: black;" target="blank">
+                            Glossário
+                        </a></li>
+                    </ul>
+                    <br>
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vRHZjbCi-lIE866Xo7AdCc8HN7HL587tGjLayewCYUGK3oAPUrNl4Wdim2oz_oW8Q/pub?embedded=true" width="700" height="500"></iframe>
+                </section>
+                <section>
+                    <h3>Artefatos de Requisitos</h3>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/15icnmf-rwxL5K0TAlSj-NvFphljF6X2T/view?usp=sharing" style="text-decoration: none; color: black;" target="blank">
+                            Pedidos do Investidor
+                        </a></li>
+                    </ul>
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vR8t9NQKw063ncRWtxN6AzktbR57A2qDZszv2pAcZW3jbW4QhSMsdObT5JOmoW3aQ/pub?embedded=true" width="700" height="500"></iframe>
+                </section>
+                <section>
+                    <h3>Artefatos de Requisitos</h3>
+                    <ul>
+                        <li style="font-size: 35px;">
+                            <a href="https://drive.google.com/file/d/175Rqkb_7rrbgCcl7bCfcauNXzvS1w6AW/view?usp=sharing" style="text-decoration: none; color: black;" target="blank">
+                            Especificação de Caso de Uso: Gerenciar Treinamento Agente
+                            </a>
+                        </li>
+                    </ul>
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTqrpzYF1BEnWU4dQy0O7drBUfbdttio5jw80TZLIRnqTLkej6b_nfi3omIBhvqkg/pub?embedded=true" width="700" height="500"></iframe>
+                </section>
+            </section>
+
+            <!--MVP-->
+            <section>
+                <h3>
+                    <a href="https://ddqn-fjsp.herokuapp.com/" style="color: black;" target="blank">
+                        MVP
+                    </a>
+                </h3>
+            </section>
+
+
+            <section>
+                <h3>Conclusão</h3>
+
+                <ul>
+                    <li>Representação do ambiente FJSP</li><br>
+                    <li>Representação do ambiente perceptível pelo agente</li><br>
+                    <li>Implementação do treinamento do Agente DDQN</li><br>
+                    <li>Desenvolvimento da interface gráfica</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Trabalhos Futuros</h3>
+
+                <ul>
+                    <li>Desenvolvimento de mais critérios de desempenho</li><br>
+                    <li>Implementação de mais regras de despacho para seleção do agente</li><br>
+                    <li>Inserção de eventos dinâmicos no ambiente</li><br>
+                    <li>Testes com diferentes algoritmos</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/mouse-pointer/mouse-pointer.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
+        });
+    </script>
+</body>
+
+</html>
